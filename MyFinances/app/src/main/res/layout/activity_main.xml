@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- EditText fields for account information -->
+
+    <!-- Account Number EditText -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- RadioButtons for account types -->
+        <RadioButton
+            android:id="@+id/radioCD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CD" />
+
+        <RadioButton
+            android:id="@+id/radioLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan" />
+
+        <RadioButton
+            android:id="@+id/radioChecking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checking Account" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextAccountNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Account Number"
+        android:minHeight="48dp" />
+
+    <!-- Initial Balance EditText -->
+    <EditText
+        android:id="@+id/editTextInitialBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Initial Balance"
+        android:minHeight="48dp" />
+
+    <!-- Current Balance EditText -->
+    <EditText
+        android:id="@+id/editTextCurrentBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Current Balance"
+        android:minHeight="48dp" />
+
+    <!-- Payment Amount EditText -->
+    <EditText
+        android:id="@+id/editTextPaymentAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Payment Amount"
+        android:minHeight="48dp" />
+
+    <!-- Interest Rate EditText -->
+    <EditText
+        android:id="@+id/editTextInterestRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Interest Rate"
+        android:minHeight="48dp" />
+
+    <!-- Save and Cancel Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"/>
+    </LinearLayout>
+
+    <!-- Tables for displaying account entries -->
+
+    <!-- CD Account Table -->
+    <TableLayout
+        android:id="@+id/tableCD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <!-- Header row for CD account -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Initial Balance"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Balance"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <!-- Define data rows for CD account dynamically -->
+    </TableLayout>
+
+    <!-- Loan Account Table -->
+    <TableLayout
+        android:id="@+id/tableLoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <!-- Header row for Loan account -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Initial Balance"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Balance"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <!-- Define data rows for Loan account dynamically -->
+    </TableLayout>
+
+    <!-- Checking Account Table -->
+    <TableLayout
+        android:id="@+id/tableChecking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <!-- Header row for Checking Account -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Initial Balance"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Balance"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <!-- Define data rows for Checking Account dynamically -->
+    </TableLayout>
+</LinearLayout>

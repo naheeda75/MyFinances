@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="database_name">myfinances.db</string>
+    <string name="database_version">1</string>
+
+    <string name="create_table_cds">CREATE TABLE cds (account_number TEXT PRIMARY KEY, initial_balance REAL, current_balance REAL, interest_rate REAL);</string>
+    <string name="create_table_loans">CREATE TABLE loans (account_number TEXT PRIMARY KEY, initial_balance REAL, current_balance REAL, payment_amount REAL, interest_rate REAL);</string>
+    <string name="create_table_checking_accounts">CREATE TABLE checking_accounts (account_number TEXT PRIMARY KEY, current_balance REAL);</string>
+</resources>
